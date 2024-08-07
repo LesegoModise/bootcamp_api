@@ -1,0 +1,66 @@
+GET http://localhost:3000/api/word_game?sentence=<the sentence you want to analyse.> HTTP/1.1
+
+###
+
+POST http://localhost:3000/api/word_game/longest HTTP/1.1
+Content-Type: application/json
+
+{
+    "sentence" : "the sentence you want to analyse."
+}
+
+###
+
+POST http://localhost:3000/api/word_game/shortest HTTP/1.1
+Content-Type: application/json
+
+{
+    "sentence" : "the sentence you want to analyse."
+}
+
+###
+
+POST http://localhost:3000/api/word_game/length HTTP/1.1
+Content-Type: application/json
+
+{
+    "sentence" : "the sentence you want to analyse."
+}
+
+###
+
+GET http://localhost:3000/api/phonebill/prices HTTP/1.1
+Content-Type: application/json
+
+###
+
+POST http://localhost:3000/api/phonebill/total HTTP/1.1
+Content-Type: application/json
+
+{
+    "bill": "call,sms,call"
+}
+
+###
+
+POST http://localhost:3000/api/phonebill/price HTTP/1.1
+Content-Type: application/json
+
+{
+    "type" : "sms",
+    "price" : 2.85
+}
+
+### 
+
+GET http://localhost:3000/api/enough HTTP/1.1
+
+###
+
+POST http://localhost:3000/api/enough HTTP/1.1
+Content-Type: application/json
+
+{
+   "usage" : "call, data, sms",
+   "available" : 54
+}

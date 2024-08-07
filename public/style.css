@@ -1,0 +1,61 @@
+.container {
+    background-image: url(./background.jpg);
+    padding: 2em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    /* background-repeat: no-repeat; */
+    /* height: 100%; */
+} 
+
+.heading {
+    font-size: xx-large;
+    font-weight: bolder;
+    text-decoration: underline;
+    font-style: italic;
+    color: white;
+    text-align: center;
+    background-color: #dcb39e;
+    border-radius: 2em;
+    border: 3px solid;
+}
+
+.subheading {
+    text-decoration: underline;
+    font-size: large;
+}
+
+.wordgame, .phonebill, .enoughairtime {
+    margin: 1em;
+    font-size: medium;
+    font-weight: bold;
+    text-align: center;
+    border: 3px solid;
+    padding: 1em;
+}
+
+.wordgame {
+    background-color: #F1F0F0;
+}
+
+.phonebill {
+    background-color: #EAE5E6;
+}
+
+.enoughairtime {
+    background-color: #DBD2D0;
+}
+
+.result-text, .message-reset, .message-updated{
+    color: green;
+}
+
+.message-cleared {
+    color: orange;
+}
+
+button {
+    border: 1px solid black;
+    border-radius: 2em;
+    background-color: #929088;
+    font-weight: lighter;
+    color: white;
+}
