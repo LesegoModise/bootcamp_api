@@ -30,7 +30,7 @@ document.addEventListener('alpine:init', () => {
                 return;
             }
 
-            const response = await fetch(`http://localhost:3000/api/word_game?sentence=${encodeURIComponent(this.sentence)}`);
+            const response = await fetch(`/api/word_game?sentence=${encodeURIComponent(this.sentence)}`);
             this.result = await response.json();
             // if fetch input is valid, it will send a network request to the url I have specified to fetch data and await just pauses the execution until the request is complete and returns a response
             // fetch function is used to make an HTTP request and the URL is dynamically constructed with the user's sentence whis is URL-encoded to handle special characters properly
@@ -43,7 +43,7 @@ document.addEventListener('alpine:init', () => {
         },
 
         async getPrices() {
-            const response = await axios.get('http://localhost:3000/api/phonebill/prices');
+            const response = await axios.get('/api/phonebill/prices');
             // axios is used to make a GET request for the endpoint in the URL so that it can retrieve phone bill prices.
             this.callPrice = response.data.call;
             this.smsPrice = response.data.sms;
@@ -58,7 +58,7 @@ document.addEventListener('alpine:init', () => {
                 return; // exit method if the price is invalid
             }
 
-            const response = await axios.post('http://localhost:3000/api/phonebill/price', {
+            const response = await axios.post('/api/phonebill/price', {
                 type,
                 price
                 // sends POST request to update the prices
@@ -78,7 +78,7 @@ document.addEventListener('alpine:init', () => {
                 return;
             }
 
-            const response = await axios.post('http://localhost:3000/api/phonebill/total', {
+            const response = await axios.post('/api/phonebill/total', {
                 bill: this.bill
                 // sends POST request to calculate total amount based on the bill given
             });
@@ -121,7 +121,7 @@ document.addEventListener('alpine:init', () => {
                 return;
             }
 
-            const response = await axios.post('http://localhost:3000/api/enough', {
+            const response = await axios.post('/api/enough', {
                 usage: this.usage,
                 available: this.available
                 // sends POST request to the API endpoint and waits for the request to be completed before it returns a response
